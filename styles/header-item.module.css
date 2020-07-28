@@ -1,0 +1,7 @@
+.header-item {
+  color:#23232e;
+  text-align: end;
+}
+.header-item:hover { 
+  color: #e0a800; 
+}
