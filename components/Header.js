@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import NavBar from 'react-bootstrap/Navbar';
-import styles from '../styles/header.module.css';
+import styles from './header.module.css';
 import HeaderItem from './HeaderItem';
 
 export default React.memo(function Header(){

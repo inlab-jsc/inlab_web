@@ -1,9 +1,7 @@
-/* eslint-disable import/no-extraneous-dependencies */
-/* eslint-disable react/require-default-props */
 import Link from 'next/link'
 import Nav from 'react-bootstrap/Nav'
 import PropTypes from 'prop-types'
-import styles from '../styles/header-item.module.css'
+import styles from './header-item.module.css'
 
 function HeaderItem({href,text}){
   return(
