@@ -3,5 +3,12 @@
   height: 50px;
   object-fit: cover;
   flex-direction: column;
+}
 
+.col {
+  margin-bottom: 50px;
+  position: relative;
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
 }

@@ -8,7 +8,7 @@ function Row({number, unit , children}){
         <div className={`text-warning ${styles.number}`}>{number}</div>
         <div className={styles.unit}>{unit}</div>
       </div>
-      <div className="col-8">
+      <div className="col-8 d-flex align-items-center">
         <div className={styles.explain}>{children}</div>
       </div>
     </div>
