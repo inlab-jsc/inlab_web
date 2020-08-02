@@ -56,7 +56,7 @@ export default function Home() {
       <div className="bg-warning">
         <div className={styles.heading5}>Bạn có dữ liệu cần dán nhãn?</div>
         <Link href="/contactsale">
-          <Button variant="dark" className="mb-5 p-3" size="lg"> Liên hệ chúng tôi</Button>
+          <Button variant="dark" className={styles.button} size="lg"> Liên hệ chúng tôi</Button>
         </Link>            
       </div> 
       <style jsx global>
