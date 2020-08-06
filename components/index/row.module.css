@@ -5,9 +5,15 @@
   font-size: 15px;
   font-weight: lighter;
   text-align: justify;
-  width: 80%;
+  width: 100%;
 }
 .unit{
   font-size: 15px;
   font-weight: bold;
+}
+
+@media screen and (min-width: 773px) {
+  .explain {
+    width: 80%;
+  }
 }
