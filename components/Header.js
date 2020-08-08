@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import NavBar from 'react-bootstrap/Navbar';
-import styles from './header.module.css';
+import styles from '@styles/Header.module.css';
 import HeaderItem from './HeaderItem';
 
 export default React.memo(function Header(){
@@ -8,7 +8,7 @@ export default React.memo(function Header(){
     <NavBar expand="lg" bg="light" sticky="top">
       <Link href="/">
         <NavBar.Brand>
-          <img src="images/logo.png" alt="InLab Logo" className={styles.logo} />
+          <img src="/images/logo.png" alt="InLab Logo" className={styles.logo} />
         </NavBar.Brand>
       </Link>
       <NavBar.Toggle aria-controls="header-menu" aria-expanded="false" />

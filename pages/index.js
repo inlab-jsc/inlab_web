@@ -1,10 +1,10 @@
 import Head from 'next/head'
 import Link from 'next/link'
 import Button from 'react-bootstrap/Button'
-import styles from '../styles/index.module.css'
-import Header from '../components/Header'
-import Row from '../components/index/Row'
-import Column from '../components/index/Column'
+import styles from '@styles/index.module.css'
+import Header from '@components/Header'
+import Row from '@components/index/Row'
+import Column from '@components/index/Column'
 
 export default function Home() {
   return (
@@ -13,7 +13,9 @@ export default function Home() {
         <title>Giới thiệu - Inlab</title>
         <link rel="icon" type="image/png" href="images/logoInlabSquare.png" />
       </Head>
+      
       <Header />
+
       <div className={styles['first-big-div']}>
         <img className={styles.blindimg} src="images/undraw_pedestrian_crossing_l6jv.png" alt="" />
         <p className={`${styles.text} ${styles.heading1}`} data-aos="fade-up" data-aos-duration="1000">Inlab - vì cuộc sống tốt đẹp hơn cho người khiếm thị</p>
@@ -46,19 +48,20 @@ export default function Home() {
 
       <div className={styles['ung-dung']}>
         <p className={styles.heading4} data-aos="zoom-in" data-aos-duration="1200">ỨNG DỤNG</p>
-
         <div className={styles['column-wrapper']}>
           <Column imgSrc="images/audio.png">Dán nhãn dữ liệu </Column>
           <Column imgSrc="images/micro.png">Tạo dữ liệu âm thanh để tổng hợp giọng nói</Column>
           <Column imgSrc="images/speak.png">Tạo văn bản dạng hội thoại</Column>   
         </div>
       </div>
+
       <div className="bg-warning">
         <div className={styles.heading5}>Bạn có dữ liệu cần dán nhãn?</div>
         <Link href="/contactsale">
           <Button variant="dark" className={styles.button} size="lg"> Liên hệ chúng tôi</Button>
         </Link>            
       </div> 
+
       <style jsx global>
         {`
         html,

@@ -1,0 +1,145 @@
+.intro-box {
+  height: 400px;
+  width: 100%;
+  background-color: #FBE297;
+  margin-bottom: 100px;
+}
+
+.intro-img {
+  height: 80%;
+  justify-self: end;
+}
+
+.divide-line {
+  width: 70px;
+  height: 3px;
+  background-color: #FFC107;
+  margin: 10px auto;
+}
+
+.play-icon {
+  width: 1.5rem;
+  height: 1.5rem;
+  margin: auto 10px;
+}
+
+.intro-box-line {
+  composes: divide-line;
+  width: 150px;
+  margin-left: 0;
+}
+
+
+.overall-box {
+  text-align: justify;
+  text-align-last: center;
+  width: 85%;
+  margin: 0 auto;
+  margin-bottom: 100px;
+}
+
+.card-container {
+  height: 300px;
+  margin-bottom: 150px;
+}
+
+.info-card {
+  width: 30%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: justify;
+  text-align-last: center;
+  border-radius: 20px;
+  padding: 30px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.info-left-card {
+  composes: info-card;
+  background: #FAE5B6;
+}
+
+.info-right-card {
+  composes: info-card;
+  background: #A7A9AA;
+}
+
+.info-right-card h4 {
+  color: #FFC107;
+}
+
+.info-right-card p { 
+  color: #fff;
+}
+
+.story-container {
+  background: #85898E;
+  color: #fff;
+  padding: 50px;
+  padding-top: 100px;
+  padding-bottom: 100px;
+  overflow: hidden;
+}
+
+.story-container h4 {
+  color: #FFC107;
+}
+
+.story-container-line {
+  composes: divide-line;
+  margin-bottom: 50px;
+}
+
+.story-box {
+  text-align: justify;
+  justify-content: space-around;
+  margin-bottom: 40px;
+}
+
+.story-box b {
+  color: #FAE5B6;
+}
+
+.story-text {
+  width: 40%;
+}
+
+.story-img {
+  width: 40%;
+  text-align: justify;
+  text-align-last: center;
+}
+
+.story-img p {
+  margin-top: 5px;
+}
+
+@media screen and (max-width: 700px) {
+  .intro-img {
+    width: 0;
+    height: 0;
+  }
+
+  .card-container {
+    flex-direction: column;
+    height: 700px;
+  }
+
+  .info-card {
+    width: 50%;
+    margin: auto;
+    height: 300px;
+    margin-bottom: 50px;
+  }
+
+  .story-box {
+    flex-direction: column;
+  }
+
+  .story-text, .story-img {
+    width: 80%;
+    margin: auto;
+  }
+}
