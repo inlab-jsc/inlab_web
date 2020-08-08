@@ -1,6 +1,4 @@
 import Head from 'next/head'
-import Link from 'next/link'
-import Button from 'react-bootstrap/Button'
 import styles from '../../styles/resources-dataset.module.css'
 import Header from '../../components/Header'
 import DatasetItem from '../../components/dataset/DatasetItem'
@@ -11,12 +9,13 @@ export default function Dataset() {
       <Head>
         <title>Dataset - Inlab</title>
         <link rel="icon" type="image/png" href="images/logoInlabSquare.png" />
+        <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300&amp;display=swap" rel="stylesheet" />
       </Head>
       <Header />
-      <h2 id={styles['dataset-header']} class="heading-text text-warning text-center">Dataset</h2>
-      <div class={styles['table-wrapper']}>
-        <table class={styles['table-container']}>
-          <thead class={styles['resource-table-header text-primary']}>
+      <h2 id={styles['dataset-header']} className="heading-text text-warning text-center">Dataset</h2>
+      <div className={styles['table-wrapper']}>
+        <table className={styles['table-container']}>
+          <thead className={`${styles['resource-table-header']} ${styles['text-primary']}`}>
             <tr>
               <th id={styles.dataset}>Dataset</th>
               <th id={styles.date}>Time</th>
@@ -27,8 +26,8 @@ export default function Dataset() {
           </thead>
           
           <tbody>
-            <DatasetItem imgSrc="/img/logo.png" name="VST" author="Inlab Technology" time="2020" location="Vietnam" dataProvided="Treebank, Sentiment" annotation="Storing" />
-            <DatasetItem imgSrc="/img/mai-vutran.jpg" name="Vietnamese Person Questions Dataset" author="Mai-Vu Tran" time="2012" location="Vietnam" dataProvided="Text" annotation="Text Labeling" />
+            <DatasetItem imgSrc="/images/logo.png" name="VST" author="Inlab Technology" time="2020" location="Vietnam" dataProvided="Treebank, Sentiment" annotation="Storing" />
+            <DatasetItem imgSrc="/images/mai-vutran.jpg" name="Vietnamese Person Questions Dataset" author="Mai-Vu Tran" time="2012" location="Vietnam" dataProvided="Text" annotation="Text Labeling" />
           </tbody>
         
         </table>
@@ -44,10 +43,6 @@ export default function Dataset() {
           font-weight: 100;
           font-size: 0.9rem;
         }
-        
-        b {
-          font-weight: 500;
-        }
 
         tbody tr {
           background-color: white;
@@ -62,10 +57,6 @@ export default function Dataset() {
           -webkit-transition: 0.3s ease all;
             -webkit-transition: 0.3s ease all;
             transition: 0.3s ease all;
-        }
-
-        * {
-          box-sizing: border-box;
         }
       `}
       </style>

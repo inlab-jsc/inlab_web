@@ -3,12 +3,12 @@ import styles from './dataset-item.module.css'
 
 function DatasetItem({imgSrc, name, author, time, location, dataProvided, annotation}){
   return(
-    <tr class="single-dataset">
-      <th class="dataset-content">
-        <img src={imgSrc} alt="logo" class={styles['table-logo']}></img>
+    <tr className="single-dataset">
+      <th className={styles['dataset-content']}>
+        <img src={imgSrc} alt="logo" className={styles['table-logo']} />
         <div>
-          <div >{name}</div>
-          <div class={`${styles.author} ${styles['text-secondary']}`}>by {author}</div>
+          <div className={styles.name}>{name}</div>
+          <div className={`${styles.author} ${styles['text-secondary']}`}>by {author}</div>
         </div>
       </th>
       <th>{time}</th>

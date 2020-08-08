@@ -27,6 +27,10 @@
   margin-top: 0px !important;
 }
 
+.name {
+  margin-top: 15px;
+}
+
 .dataset-content .text-secondary {
   font-weight: 400 !important;
   margin-bottom: 15px;
