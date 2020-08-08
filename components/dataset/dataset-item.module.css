@@ -1,0 +1,41 @@
+.text-primary {
+  color: #000 !important;
+  font-size: 1rem;
+  font-weight: 500;
+  margin-top: 15px;
+}
+
+.text-secondary {
+  color: #000 !important;
+  font-size: 0.9rem;
+  font-weight: 500;
+  margin-top: 10px;
+}
+
+.text-tertiary {
+  color: #000;
+  font-size: 0.75rem;
+  font-weight: 100;
+}
+
+.dataset-content {
+  display: flex;
+  padding-left: 24px;
+}
+
+.author {
+  margin-top: 0px !important;
+}
+
+.dataset-content .text-secondary {
+  font-weight: 400 !important;
+  margin-bottom: 15px;
+}
+
+.table-logo {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  margin: auto 20px auto 0;
+  vertical-align: middle;
+}

@@ -1,0 +1,100 @@
+@media only screen and (max-width: 1000px) {
+  .table-container {
+    width: 1000px;
+  }
+}
+
+.text-primary {
+  color: #000 !important;
+  font-size: 1rem;
+  font-weight: 500;
+  margin-top: 15px;
+}
+
+.text-secondary {
+  color: #000 !important;
+  font-size: 0.9rem;
+  font-weight: 500;
+  margin-top: 10px;
+}
+
+.text-tertiary {
+  color: #000;
+  font-size: 0.75rem;
+  font-weight: 100;
+}
+
+.title {
+  text-align: center;
+  margin: 30px auto;
+}
+
+.table-wrapper {
+  width: calc(100% - 32px);
+  margin: 0 16px;
+  overflow: overlay;
+  border: 1px solid rgb(236, 236, 237);
+}
+
+.table-container {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+  line-height: 1.8rem;
+}
+
+.table-container th {
+  padding: 3px 14px;
+  font-weight: 400;
+}
+
+.resource-table-header {
+  border-bottom: 1px solid rgb(230, 230, 230);
+}
+
+.table tbody tr:not(:last-child) {
+  border-bottom: 1px solid #f5f9fa;
+}
+
+#dataset {
+  width: 30%;
+}
+
+#dataset-header {
+  padding: 20px 0;
+  font-weight: 600 !important;
+}
+
+#date {
+  width: 10%;
+}
+
+#location {
+  width: 20%;
+}
+
+#data-provided, #annotation {
+  width: 20%;
+}
+
+.dataset-content {
+  display: flex;
+  padding-left: 24px;
+}
+
+.author {
+  margin-top: 0px !important;
+}
+
+.dataset-content .text-secondary {
+  font-weight: 400 !important;
+  margin-bottom: 15px;
+}
+
+.table-logo {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  margin: auto 20px auto 0;
+  vertical-align: middle;
+}

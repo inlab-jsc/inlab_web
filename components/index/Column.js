@@ -3,7 +3,7 @@ import styles from './column.module.css'
 
 function Column({imgSrc,children}){
   return(
-    <div className={styles.col} data-aos="zoom-in" data-aos-duration="1200">
+    <div className={`col ${styles.col}`} data-aos="zoom-in" data-aos-duration="1200">
       <img src={imgSrc} className={styles.image} alt="" />
       <div className={styles.text}>{children}</div>
     </div>
