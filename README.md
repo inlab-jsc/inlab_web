@@ -1,30 +1,73 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Inlab_web
 
-## Getting Started
 
-First, run the development server:
+# TL,DR:
+Inlab_web is an attempt to fully migrate Inlab [website](http:/http://inlab.nisci.gov.vn/) to NextJs
 
-```bash
-npm run dev
-# or
-yarn dev
-```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+# Reason
+  - React in a nutshell, component breakdown for more maintainance capability
+  - Built-in [Link component](https://nextjs.org/docs/api-reference/next/link) and [useRouter hook](https://nextjs.org/docs/api-reference/next/router) with prefetch, native navigate and routing (++UX)
+  - [File-system based router](https://nextjs.org/docs/routing/introduction) built on the concept of pages (++ readable code structure)
+  - Server Side Rendering and Static Site Generators
+  - Ability to intergrate with many plugin: Babel, TypeScript, Eslint (++ dev exp && code convetion)
+  - ... (on update)
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+# Front-end
 
-## Learn More
+### &emsp;Component
+  - Reuseable component can be found at `./components/` ~  ~ a.k.a ~ ~ `@components/`
+  - Component comes with component-level CSS ([read more](#css))
 
-To learn more about Next.js, take a look at the following resources:
+### &emsp;CSS
+  - Module CSS mostly for clear boundary between pages and pages, pages and components, components and components
+  - Inline JSX style tag for page top-level CSS: `html,body,...`  (in research for Module CSS replacement)
+  - App top-level CSS likes `Bootstrap` `AOS` **MUST** be intitated at _app.js
+  - CSS files should be centralized in `./styles/` ~ ~ a.k.a ~ ~ `@styles/`
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+# Back-end
 
-## Deploy on Vercel
+### &emsp;API
+  - API should be write in TypeScript due to complex nature of JSON
+  - API should have APIdoc
+  - API inherits [file-system based router](https://nextjs.org/docs/routing/introduction)
+  - API should have HTTP response code (mention in [coding covention](https://docs.google.com/document/d/1wQ-QT7HJtQ9xPkBAPFiolEmZcoOXSsNVjhSxFlWaahs/edit?usp=sharing))
+  - Can be found at `./pages/api/` ~ ~ a.k.a ~ ~ `@api/`
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/import?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### &emsp;Authorization
+  - JWT tokens implements for intergrated with mobile apps
+    - long time access token (1 month) or short time access token (1 hour) with long time refresh token (1 month) (needing testing)
+    - data contain inside JWT:
+  - Middleware handler (NextApiHandler) for authentication can be found at `./utils/authentication` ~ ~ a.k.a ~ ~ `@utils/authentication`
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+### &emsp;Database Connection
+  - Database connection **MUST** follow singleton patern, implementation can be found at `./utils/database.js` ~ ~ a.k.a ~ ~ `@utils/database`
+
+# Plugins
+
+### &emsp;ESLint
+  - Config can be found at `.eslintrc.json`
+  - Babel ESLint for `*.js` `*.jsx` file, TypeScript ESLint for `*.ts` `*.tsx` file
+  - Mainly use [eslint-config-airbnb](https://github.com/airbnb/javascript/tree/master/packages/eslint-config-airbnb) and [eslint-config-airbnb-typescript](https://github.com/iamturns/eslint-config-airbnb-typescript)
+
+### &emsp;Babel
+  - Config can be found at `.babelrc`
+  - Babel module import resolver:
+
+### &emsp;Prettier
+  - Config can be found at `.prettierrc`
+
+# DotEnv
+
+
+# In Development
+  - Docker Compose(Nginx, PostgreSQL, Node)
+  - pm2 
+  - Instruction (setup, run, build, dev,... )
+  - Readme (Table of content,...)
+
+
+
+
+
