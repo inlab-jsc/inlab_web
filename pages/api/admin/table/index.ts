@@ -1,7 +1,7 @@
 import { NextApiRequest, NextApiResponse } from "next";
 import { IDatabase } from "pg-promise";
 import singletonDB from "@utils/database";
-
+import withAdminPermission from "@utils/authentication/admin.ts";
 // temporary any type
 // expect type ExtendedProtocol = IDatabase<IExtensions> & IExtensions
 // check https://github.com/vitaly-t/pg-promise-demo/tree/master/TypeScript
@@ -39,7 +39,7 @@ const getTableDetail = async (
   };
 };
 
-export default async function getTableSchema(
+export default withAdminPermission(async function getTableSchema(
   req: NextApiRequest,
   res: NextApiResponse
 ): Promise<void> {
@@ -53,11 +53,11 @@ export default async function getTableSchema(
         arr.push(getTableDetail(table[i].table_name, singletonDB));
       }
       const result = await Promise.all(arr);
-      res.send({ result });
+      res.send(result);
     } catch (err) {
       res.status(500).send({ message: err.message });
     }
   } else {
     res.status(405).send({ message: "nope" });
   }
-}
+});

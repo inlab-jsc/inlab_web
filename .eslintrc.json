@@ -50,27 +50,20 @@
     "parserOptions": {
       "ecmaFeatures": {
         "jsx": true
-      }
+      },
+      "project":["./tsconfig.json"]
     },
     "plugins": ["@typescript-eslint","react","prettier"],
     "extends": [
-      "eslint:recommended",
-      "plugin:@typescript-eslint/eslint-recommended",
+      "airbnb-typescript",
+      "airbnb/hooks",
       "plugin:@typescript-eslint/recommended",
-      "plugin:react/recommended",
-      "plugin:jsx-a11y/recommended",
       "prettier/@typescript-eslint",
       "plugin:prettier/recommended"
     ],
     "rules": {
       "no-plusplus": ["error", { "allowForLoopAfterthoughts": true }],
-      "prettier/prettier": ["error", {}, { "usePrettierrc": true }],
-      "react/prop-types":"off",
-      "@typescript-eslint/explicit-function-return-type": "off",
-      "@typescript-eslint/interface-name-prefix": "off",
-      "@typescript-eslint/no-explicit-any": "off",
-      "@typescript-eslint/ban-ts-ignore": "off",
-      "react/react-in-jsx-scope": "off"
+      "prettier/prettier": ["error", {}, { "usePrettierrc": true }]
     }
   }]
 }
