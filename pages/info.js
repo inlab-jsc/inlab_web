@@ -6,7 +6,7 @@ export default function DataSet(){
   return(
     <>
       <Head>
-        <title>Giới thiệu - Inlab</title>
+        <title>About Us - Inlab</title>
         <link rel="icon" type="image/png" href="/images/logoInlabSquare.png" />
       </Head>
 

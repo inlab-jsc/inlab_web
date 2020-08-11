@@ -26,8 +26,23 @@ export default function Dataset() {
           </thead>
           
           <tbody>
-            <DatasetItem imgSrc="/images/logo.png" name="VST" author="Inlab Technology" time="2020" location="Vietnam" dataProvided="Treebank, Sentiment" annotation="Storing" />
-            <DatasetItem imgSrc="/images/mai-vutran.jpg" name="Vietnamese Person Questions Dataset" author="Mai-Vu Tran" time="2012" location="Vietnam" dataProvided="Text" annotation="Text Labeling" />
+            <DatasetItem 
+              imgSrc="/images/logo.png" 
+              name="VST" 
+              author="Inlab Technology" 
+              time="2020" location="Vietnam" 
+              dataProvided="Treebank, Sentiment" 
+              annotation="Storing" 
+            />
+            <DatasetItem 
+              imgSrc="/images/mai-vutran.jpg" 
+              name="Vietnamese Person Questions Dataset" 
+              author="Mai-Vu Tran" 
+              time="2012" 
+              location="Vietnam" 
+              dataProvided="Text" 
+              annotation="Text Labeling" 
+            />
           </tbody>
         
         </table>
