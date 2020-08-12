@@ -1,0 +1,40 @@
+.show-flex {
+  display: flex;
+}
+
+.contact-item {
+  margin-bottom: 5%;
+}
+
+.contact-item h6 {
+  margin-bottom: 0;
+}
+
+.contact-icon {
+  width: 20px;
+  height: 20px;
+  margin-top: 2px;
+  flex-shrink: 0;
+}
+
+.contact-text {
+  color: #fff;
+  margin-left: 10px;
+}
+
+@media screen and (max-width: 780px) {
+  .contact-item {
+    flex-direction: column;
+  }
+
+  .contact-icon {
+    margin: auto;
+    margin-top: 10px;
+    margin-bottom: 7px;
+  }
+
+  .contact-text {
+    text-align: center;
+    margin-left: 0 !important;
+  }
+}
