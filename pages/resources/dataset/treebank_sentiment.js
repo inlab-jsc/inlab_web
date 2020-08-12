@@ -1,6 +1,7 @@
 import Head from 'next/head'
-import styles from '../../../styles/treebank-sentiment.module.css'
-import Header from '../../../components/Header'
+import styles from '@styles/treebank-sentiment.module.css'
+import Header from '@components/Header'
+import Column from '../../../components/index/Column'
 
 export default function Dataset() {
   return (
@@ -8,7 +9,7 @@ export default function Dataset() {
       <Head>
         <title>Dataset - Inlab</title>
         <link rel="icon" type="image/png" href="images/logoInlabSquare.png" />
-        <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300&amp;display=swap" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
       </Head>
       <Header />
       <div id="treebank-body">
@@ -23,30 +24,17 @@ export default function Dataset() {
                 <a type="button" href="#right-panel" className={`btn btn-dark startbtn nav-item nav-link d-flex justify-content-center align-items-center ${styles['sentiment-button']}`}>XEM THÊM</a>
               </div>
             </div>
-            <img src='/images/sentiment-header.svg' className="sentiment-header"/>
+            <img src='/images/sentiment-header.svg' className={styles['sentiment-header']}/>
           </div>
         </div>
-        <div style={{width: '100px'}}></div>
 
         <div className="treebank-box">
           <h3 className="title">Đây là bộ dữ liệu gì?</h3>
           <div className="yellow-line"></div>
-          <div className="show-flex intro-item-container">
-            <div className="intro-item" data-aos="fade-up">
-              <img className="treebank-icon" src="/images/sentiment-icon-computer.svg"/>
-              <div className="text-secondary">90,000 câu</div>
-              <div className="intro-item-sub">được phân tích thành các từ/cụm từ và ghi điểm sắc thái</div>
-            </div>
-            <div className="intro-item" data-aos="fade-up">
-              <img className="treebank-icon" src="/images/sentiment-icon-content.svg"/>
-              <div className="text-secondary">Chủ đề đa dạng</div>
-              <div className="intro-item-sub">như văn hóa, kinh tế, giáo dục, lịch sử, ...</div>
-            </div>
-            <div className="intro-item" data-aos="fade-up">
-              <img className="treebank-icon" src="/images/sentiment-icon-tablet.svg"/>
-              <div className="text-secondary">Nguồn dữ liệu xác thực</div>
-              <div className="intro-item-sub">được tổng hợp từ các báo điện tử và các trang thông tin trên Facebook</div>
-            </div>
+          <div className={`${styles['show-flex']} ${styles['intro-item-container']}`}>
+            <Column imgSrc="/images/sentiment-icon-computer.svg" primaryText="90,000 câu" subText="được phân tích thành các từ/cụm từ và ghi điểm sắc thái" />
+            <Column imgSrc="/images/sentiment-icon-content.svg" primaryText="Chủ đề đa dạng" subText="như văn hóa, kinh tế, giáo dục, lịch sử, ..." />
+            <Column imgSrc="/images/sentiment-icon-tablet.svg" primaryText="Nguồn dữ liệu xác thực" subText="được tổng hợp từ các báo điện tử và các trang thông tin trên Facebook" />
           </div>
         </div>
    

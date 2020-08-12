@@ -8,3 +8,29 @@
 .col {
   margin-bottom: 50px;
 }
+
+
+.treebank-icon {
+  height: 2rem;
+  width: 2rem;
+}
+
+.text-secondary {
+  color: #000 !important;
+  font-size: 0.95rem;
+  font-weight: 500;
+  margin-top: 10px;
+}
+
+.intro-item {
+  width: calc((100% - 5rem)/ 3);
+  padding-top: 50px;
+  padding-bottom: 90px;
+  text-align: center;
+}
+
+.intro-item-sub {
+  height: 5%;
+  /* font-size: 15px; */
+  font-weight: lighter;
+}

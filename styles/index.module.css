@@ -17,7 +17,15 @@
 
 } */
 
+.intro-item-container {
+  justify-content: space-between;
+  margin-left: 10%;
+  margin-right: 10%;
+}
 
+.show-flex {
+  display: flex;
+}
 
 /* ::-webkit-scrollbar {
   width: auto;

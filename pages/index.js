@@ -48,10 +48,10 @@ export default function Home() {
 
       <div className={styles['ung-dung']}>
         <p className={styles.heading4} data-aos="zoom-in" data-aos-duration="1200">ỨNG DỤNG</p>
-        <div className={styles['column-wrapper']}>
-          <Column imgSrc="images/audio.png">Dán nhãn dữ liệu </Column>
-          <Column imgSrc="images/micro.png">Tạo dữ liệu âm thanh để tổng hợp giọng nói</Column>
-          <Column imgSrc="images/speak.png">Tạo văn bản dạng hội thoại</Column>   
+        <div className={`${styles['show-flex']} ${styles['intro-item-container']}`}>
+          <Column imgSrc="images/audio.png" subText="Dán nhãn dữ liệu "></Column>
+          <Column imgSrc="images/micro.png" subText="Tạo dữ liệu âm thanh để tổng hợp giọng nói"></Column>
+          <Column imgSrc="images/speak.png" subText="Tạo văn bản dạng hội thoại"></Column>   
         </div>
       </div>
 

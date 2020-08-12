@@ -1,7 +1,7 @@
 import Head from 'next/head'
-import styles from '../../styles/resources-dataset.module.css'
-import Header from '../../components/Header'
-import DatasetItem from '../../components/dataset/DatasetItem'
+import styles from '@styles/resources-dataset.module.css'
+import Header from '@components/Header'
+import DatasetItem from '@components/dataset/DatasetItem'
 
 export default function Dataset() {
   return (
