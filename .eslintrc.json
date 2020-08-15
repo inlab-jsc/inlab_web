@@ -33,7 +33,7 @@
   ],
   "rules": {
     "react/react-in-jsx-scope": "off",
-    "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
+    "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx",".ts",".tsx"] }],
     "react/display-name": 1,
     "jsx-a11y/anchor-is-valid":"off",
     "import/no-extraneous-dependencies":"off",
@@ -43,5 +43,27 @@
     "Atomics": "readonly",
     "SharedArrayBuffer": "readonly",
     "React": "writable"
-  }
+  },
+  "overrides": [{
+    "files":["*.ts","*.tsx"],
+    "parser": "@typescript-eslint/parser",
+    "parserOptions": {
+      "ecmaFeatures": {
+        "jsx": true
+      },
+      "project":["./tsconfig.json"]
+    },
+    "plugins": ["@typescript-eslint","react","prettier"],
+    "extends": [
+      "airbnb-typescript",
+      "airbnb/hooks",
+      "plugin:@typescript-eslint/recommended",
+      "prettier/@typescript-eslint",
+      "plugin:prettier/recommended"
+    ],
+    "rules": {
+      "no-plusplus": ["error", { "allowForLoopAfterthoughts": true }],
+      "prettier/prettier": ["error", {}, { "usePrettierrc": true }]
+    }
+  }]
 }
