@@ -2,8 +2,33 @@ import Head from 'next/head'
 import styles from '@styles/treebank-sentiment.module.css'
 import Header from '@components/Header'
 import Column from '@components/index/Column'
-import ContactItem from '@components/dataset/ContactItem'
-import FormItem from '@components/dataset/FormItem'
+import ContactItem from '@components/dataset/treebank_sentiment/ContactItem'
+import FormItem from '@components/dataset/treebank_sentiment/FormItem'
+import ChartItem from '@components/dataset/treebank_sentiment/ChartItem'
+
+const chart1 = {
+  id: "sentimentScore",
+  title: "Tỉ lệ các câu có sắc thái \ntích cực/ tiêu cực/ trung tính\n trên tổng số câu",
+  name: "Liệt kê số điểm sắc thái của các câu", 
+  dataName: ['Câu positive', 'Câu negative', 'Câu neutral'], 
+  dataValue: [46000, 40500, 3500],
+}
+
+const chart2 = {
+  id: "wordNumInSenc",
+  title: "Tỉ lệ các câu \nphân chia theo số từ có trong câu",
+  name: "Số từ trong một câu", 
+  dataName: ['Câu chứa 10-15 từ', 'Câu chứa nhiều hơn 15 từ', 'Câu chứa dưới 10 từ'],
+  dataValue: [52000, 35000, 3000],
+}
+
+const chart3 = {
+  id: "totalSentimentWord",
+  title: "Tỉ lệ các từ mang sắc thái\n tích cực/ tiêu cực/ trung tính\n trên tổng số từ",
+  name: "Tổng số từ theo sắc thái trong dataset", 
+  dataName: ['Từ positive', 'Từ negative', 'Từ neutral'], 
+  dataValue: [100000, 80000, 20000],
+}
 
 export default function Dataset() {
   return (
@@ -60,9 +85,12 @@ export default function Dataset() {
           <h3 className={styles.title}>Thống kê nội dung bộ dữ liệu</h3>
           <div className={styles['yellow-line']}></div>
           <div className={styles['chart-container']}>
-            <div id={styles.sentimentScore} className={styles.chart} style={{gridArea: 'pie1'}} data-aos="fade-up"></div>
+            <ChartItem id={chart1.id} name={chart1.name} title={chart1.title} dataName={chart1.dataName} dataValue={chart1.dataValue} />
+            <ChartItem id={chart2.id} name={chart2.name} title={chart2.title} dataName={chart2.dataName} dataValue={chart2.dataValue} />
+            <ChartItem id={chart3.id} name={chart3.name} title={chart3.title} dataName={chart3.dataName} dataValue={chart3.dataValue} />
+            {/* <div id={styles.sentimentScore} className={styles.chart} style={{gridArea: 'pie1'}} data-aos="fade-up"></div>
             <div id={styles.wordNumInSenc} className={styles.chart}  style={{gridArea: 'pie2'}} data-aos="fade-up"></div>
-            <div id={styles.totalSentimentWord} className={styles.chart}  style={{gridArea: 'pie3'}} data-aos="fade-up"></div>
+            <div id={styles.totalSentimentWord} className={styles.chart}  style={{gridArea: 'pie3'}} data-aos="fade-up"></div> */}
           </div>
         </div>
 

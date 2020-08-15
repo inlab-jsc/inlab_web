@@ -166,18 +166,10 @@
 
 /* Chart Box */
 .chart-container {
-  display: grid;
-  grid-template-areas: 
-  "pie1 pie2 pie3";
+  display: flex;
+  justify-content: space-around;
   width: 100%;
   margin-top: 30px;
-}
-
-.chart {
-  height: 250px;
-  width: 250px;
-  margin: 0 auto;
-  margin-top: 50px;
 }
 
 .bar {
