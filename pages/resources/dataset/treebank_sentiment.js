@@ -2,8 +2,8 @@ import Head from 'next/head'
 import styles from '@styles/treebank-sentiment.module.css'
 import Header from '@components/Header'
 import Column from '@components/index/Column'
-import ContactItem from '../../../components/dataset/ContactItem'
-import FormItem from '../../../components/dataset/FormItem'
+import ContactItem from '@components/dataset/ContactItem'
+import FormItem from '@components/dataset/FormItem'
 
 export default function Dataset() {
   return (

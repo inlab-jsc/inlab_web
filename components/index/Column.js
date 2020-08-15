@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types'
 import styles from './column.module.css'
 
-function Column({imgSrc,primaryText,subText=''}){
+function Column({imgSrc, primaryText, subText=''}){
   return(
     // <div className={`col ${styles.col}`} data-aos="zoom-in" data-aos-duration="1200">
     //   <img src={imgSrc} className={styles.image} alt="" />
@@ -17,7 +17,8 @@ function Column({imgSrc,primaryText,subText=''}){
 
 Column.propTypes={
   imgSrc:PropTypes.string.isRequired,
-  children:PropTypes.string.isRequired,
+  primaryText:PropTypes.string,
+  subText: PropTypes.string,
 }
 export default React.memo(Column)
 
