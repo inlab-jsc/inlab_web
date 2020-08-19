@@ -1,9 +1,16 @@
 import PropTypes from 'prop-types'
 import styles from './dataset-item.module.css'
+import { useRouter } from 'next/router'
 
-function DatasetItem({imgSrc, name, author, time, location, dataProvided, annotation}){
+function DatasetItem({imgSrc, name, author, time, location, dataProvided, annotation, href}){
+  const router = useRouter()
+
+  const handleGoDataset = (href) => {
+    router.push(href)
+  }
+
   return(
-    <tr className="single-dataset">
+    <tr className="single-dataset" onClick={() => handleGoDataset(href)}>
       <th className={styles['dataset-content']}>
         <img src={imgSrc} alt="logo" className={styles['table-logo']} />
         <div>

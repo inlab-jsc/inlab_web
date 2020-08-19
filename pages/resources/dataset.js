@@ -33,6 +33,7 @@ export default function Dataset() {
               time="2020" location="Vietnam" 
               dataProvided="Treebank, Sentiment" 
               annotation="Storing" 
+              href="/resources/dataset/treebank_sentiment"
             />
             <DatasetItem 
               imgSrc="/images/mai-vutran.jpg" 
@@ -42,6 +43,7 @@ export default function Dataset() {
               location="Vietnam" 
               dataProvided="Text" 
               annotation="Text Labeling" 
+              href="https://github.com/lupanh/Vietnamese-Person-Questions-Dataset"
             />
           </tbody>
         
