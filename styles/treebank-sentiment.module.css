@@ -64,17 +64,6 @@
   margin-right: 10%;
 }
 
-.intro-item {
-  width: calc((100% - 5rem)/ 3);
-  padding-top: 50px;
-  padding-bottom: 90px;
-  text-align: center;
-}
-
-.intro-item-sub {
-  height: 5%;
-}
-
 .sentiment-header {
   height: 400px;
   width: 400px;
@@ -101,6 +90,7 @@
 @media screen and (max-width: 780px) {
   .intro-text {
     text-align: center;
+    margin-left: 0;
   }
 
   .intro-text a:nth-child(2) {
@@ -166,8 +156,8 @@
 
 /* Chart Box */
 .chart-container {
-  display: flex;
-  justify-content: space-around;
+  display: grid;
+  grid-template-areas: "sentimentScore wordNumInSenc totalSentimentWord";
   width: 100%;
   margin-top: 30px;
 }
@@ -178,9 +168,8 @@
 
 @media only screen and (max-width: 1070px) {
   .chart-container {
-    grid-template-areas: 
-                        "pie1 pie2"
-                        "pie3";
+    grid-template-areas: "sentimentScore wordNumInSenc"
+                         "totalSentimentWord";
     margin-bottom: 0;
   }
 
@@ -199,12 +188,9 @@
 
 @media only screen and (max-width: 600px) {
   .chart-container {
-    grid-template-areas: 
-                        /* "bar1"
-                        "bar2" */
-                        "pie1"
-                        "pie2"
-                        "pie3";
+    grid-template-areas: "sentimentScore"
+                         "wordNumInSenc"
+                         "totalSentimentWord";
     margin-bottom: 0;
     margin-top: 0;
   }
@@ -368,10 +354,6 @@
     align-items: center;
   }
 
-  .intro-item {
-    width: 60%;
-  }
-
   .dataset-quickinfo {
     flex-direction: column;
   }
@@ -405,9 +387,9 @@
 
   .chart-container {
     grid-template-areas: 
-    "pie1"
-    "pie2"
-    "pie3";
+    "sentimentScore"
+    "wordNumInSenc"
+    "totalSentimentWord";
   }
 
   #contact-us-box {

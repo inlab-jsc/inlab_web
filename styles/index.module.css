@@ -18,9 +18,10 @@
 } */
 
 .intro-item-container {
-  justify-content: space-between;
-  margin-left: 10%;
-  margin-right: 10%;
+  flex-direction: column;
+  margin-left: 0;
+  margin-right: 0;
+  align-items: center;
 }
 
 .show-flex {
@@ -56,6 +57,7 @@ background: lightgrey;
   /* height: 100vh; */
   padding-left: 15px;
   padding-right: 15px;
+  padding-bottom: 80px;
   justify-content: center;
   display: flex;
   flex-direction: column;
@@ -75,6 +77,7 @@ background: lightgrey;
 .heading2 {
   font-size: 3vh;
   font-weight: 400;
+  padding-bottom: 30px;
 }
 
 .button {
@@ -82,6 +85,7 @@ background: lightgrey;
   height: 70px;
   align-self: center;
   margin: 10px;
+  margin-bottom: 30px;
 }
 
 .gioi-thieu {
@@ -291,54 +295,74 @@ background: lightgrey;
 } */
 
 @media screen and (min-width: 773px) {
+  .intro-item-container {
+    justify-content: space-between;
+    margin-left: 10%;
+    margin-right: 10%;
+  }
+
+  .first-big-div {
+    padding-bottom: 0;
+  }
+
   .overlay{
-      height:110vh;
+    height:110vh;
   }
   .heading-text{
-      font-size: 30px;
+    font-size: 30px;
 
   }
   .contact{
-      width:80%;
-      justify-content: center;
+    width:80%;
+    justify-content: center;
   }
+
   .second-heading{
-      width: 50vw;
+    width: 50vw;
   }
+
   .form-width{
-      width:50%;
+    width:50%;
   }
+
   .bg2{
-      height: 60vh;  
+    height: 60vh;  
   }
+
   .bg3{
-      height: 70vh;  
+    height: 70vh;  
   }
+
   .bg4{
-      height: 40vh;  
+    height: 40vh;  
   }
+
   .content {
     font-size: 15px;
     width: 500px;
   }
+
   .h2{
     font-size: 35px;
   }
+
   .h3{
-      font-size: 15px;
+    font-size: 15px;
   }
+
   .h4{
-      font-size: 15px;
-      font-weight: bold;
+    font-size: 15px;
+    font-weight: bold;
   }
+
   .vande-content{
-      height: 50vh;
-      width: 60vw;
+    height: 50vh;
+    width: 60vw;
   }
 
   .btn{
-      width: 400px;
-      margin-top: 20px;
+    width: 400px;
+    margin-top: 20px;
   }
 
   .column-wrapper {
@@ -357,16 +381,19 @@ background: lightgrey;
     margin-top: 50px;
   }
 
+  .heading2 {
+    padding-bottom: 0;
+  }
 }
 
 @media screen and (min-width: 992px) {
   .header-item {
-      padding-left: 1rem !important;
+    padding-left: 1rem !important;
   }
 }
 
 @media screen and (max-width: 400px) {
   .intro {
-      transform: translateY(-60px) !important;
+    transform: translateY(-60px) !important;
   }
 }

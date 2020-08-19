@@ -5,15 +5,9 @@ import { useEffect } from 'react'
 
 const colorSet = ['#f5b971', '#fdd998', '#ffecc7']
 
-function ChartItem({id, title, name, dataName, dataValue}){  
-  
-  useEffect(() => {
-    let dataArr = new Array()
-    dataName.forEach((name, i) => {
-    dataArr[i] = {value: dataValue[i], name: name, itemStyle: {color: colorSet[i]}}
-    })
-
-    const option = {
+const option = (title, name, dataName, dataArr) => {
+  return (
+    {
       title: {
           text: title,
           bottom: '20',
@@ -65,14 +59,24 @@ function ChartItem({id, title, name, dataName, dataValue}){
               }
           }
       ]
-    };
+    }
+  )
+}
+
+function ChartItem({id, title, name, dataName, dataValue}){  
+  useEffect(() => {
+    let dataArr = new Array()
+    dataName.forEach((name, i) => {
+      dataArr[i] = {value: dataValue[i], name: name, itemStyle: {color: colorSet[i]}}
+    })
+
     var chart = echarts.init(document.getElementById(id));
-    chart.setOption(option);
+    chart.setOption(option(title, name, dataName, dataArr));
   }, [])
 
   
   return(
-    <div id={id} className={styles.chart} data-aos="fade-up"></div>
+    <div id={id} className={styles.chart} data-aos="fade-up" style={{gridArea: id}}></div>
   )
 }
 
