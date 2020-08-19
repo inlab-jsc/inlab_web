@@ -7,7 +7,6 @@ const colorSet = ['#f5b971', '#fdd998', '#ffecc7']
 
 function ChartItem({id, title, name, dataName, dataValue}){  
   
-
   useEffect(() => {
     let dataArr = new Array()
     dataName.forEach((name, i) => {
@@ -16,7 +15,7 @@ function ChartItem({id, title, name, dataName, dataValue}){
 
     const option = {
       title: {
-          text: {title},
+          text: title,
           bottom: '20',
           left: 'center',
           textStyle: {
@@ -35,7 +34,7 @@ function ChartItem({id, title, name, dataName, dataValue}){
       legend: {
           orient: 'vertical',
           left: 'left',
-          data: {dataName},
+          data: dataName,
           textStyle: {
             fontSize: 11,
             fontFamily: 'IBM Plex Sans',
@@ -44,7 +43,7 @@ function ChartItem({id, title, name, dataName, dataValue}){
       series: [
           {
               type: 'pie',
-              name: {name},
+              name: name,
               radius: '40%',
               data: dataArr,
               label: {

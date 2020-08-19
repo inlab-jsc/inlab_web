@@ -6,7 +6,7 @@ function ContactItem({label, name, placeholderText}){
     <div className={styles['form-group']}>
       <label for="exampleFormControlInput1">{label}</label>
       <div className={`d-flex align-items-center jsx-560990836 input input--icon ${styles.input}`}>
-        <input type="Name" name={name} id="exampleFormControlInput1" required="" placeholder={placeholderText} value="" className={styles['form-item']} required />                       
+        <input type="Name" name={name} id="exampleFormControlInput1" required="" placeholder={placeholderText} className={styles['form-item']} required />                       
       </div>   
     </div>
   )
