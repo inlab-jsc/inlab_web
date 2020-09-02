@@ -87,17 +87,6 @@
   color: white !important;
 }
 
-@media screen and (max-width: 780px) {
-  .intro-text {
-    text-align: center;
-    margin-left: 0;
-  }
-
-  .intro-text a:nth-child(2) {
-    margin-right: 0;
-  }
-}
-
 /* QuickIntro Box */
 .dataset-quickinfo {
   display: flex;
@@ -354,8 +343,22 @@
     align-items: center;
   }
 
+  .intro-text {
+    width: 100%;
+    text-align: center;
+  }
+
+  .intro-text a:nth-child(2) {
+    margin-right: 0;
+  }
+
+  .intro-text .show-flex {
+    justify-content: center;
+  }
+
   .dataset-quickinfo {
     flex-direction: column;
+    padding-bottom: 100px;
   }
 
   .dataset-quickinfo img {

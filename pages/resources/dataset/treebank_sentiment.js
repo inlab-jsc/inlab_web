@@ -167,6 +167,10 @@ export default function Dataset() {
           font-weight: 400 !important;
           margin-top: 0 !important;
         }
+
+        textarea:focus, input:focus{
+          outline: none;
+        }
       `}
       </style>
     </div>
